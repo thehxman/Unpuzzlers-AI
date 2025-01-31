@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="your-logo.png" alt="Logo">
+    </div>
+    <div class="menu">
+      <button class="menu-button">☰</button>
+      <div class="dropdown">
+         <a href="#hero">Home</a>
+      <a href="#our-story">Our Story</a>
+      <a href="#our-services">Our Services</a>
+      <a href="#contact-us">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div id="hero"class="hero-section">
+    <div class="hero-text">
+      <div class="hero-title" id="hero-title">AI is reshaping industries... are you ready?</div>
+
+      <div class="hero-description" id="hero-description">
+        AI is moving fast—faster than most companies can keep up with. Industries are being disrupted overnight, and those who understand its possibilities are the ones leading the change. We help you navigate this transformation, ensuring AI works for you, not against you.
+      </div>
+    </div>
+    <a href="#contact-us" class="additional-button">Contact Us</a>
+    <div class="hero-bg" style="background-image: url('./clarity.png');"></div>
+    <div class="hero-bg" style="background-image: url('./precision.png');"></div>
+    <div class="hero-bg" style="background-image: url('./impact.png');"></div>
+  </div>
+
+  <!-- Our Story Section -->
+<div id="our-story" class="story-section fade-in">
+  <div class="story-section">
+    <div class="story-image-container">
+      <img src="our-story.png" alt="Our Story Image" class="story-image">
+    </div>
+    <div class="story-content">
+      <h2 class="story-title">Our </span><span style="color: var(--primary-color);">Story</h2>
+      <p class="story-description">
+        The AI revolution isn’t coming—it’s here. Businesses that embrace it today are setting the rules for tomorrow. At Unpuzzlers, we bridge the gap between innovation and execution, equipping leaders with the tools, strategies, and insights to not just adapt, but lead.
+      </p>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- Our Services Section -->
+<div id="our-services" class="services-section fade-in">
+  <div class="services-background">
+    <div class="services-section">
+      <h2 class="services-title">Our </span><span style="color: var(--primary-color);">Services</h2>
+
+      <!-- Service 1: Strategic AI Guidance -->
+      <div class="services-item" onclick="toggleContent(0)">
+        <span class="services-name">Strategic AI Guidance</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="services-content" id="content-0">
+        <div class="services-details">
+          <p class="services-details-description">
+            From tech giants to small businesses, AI is boosting efficiency, predicting trends, and automating tasks across every industry. Whether you’re looking to streamline operations, forecast market shifts, or integrate AI-powered automation, we make sure you stay ahead of the curve.
+          </p>
+        </div>
+        <div class="services-image-container">
+          <img src="architecture.png" alt="Strategic AI Guidance Image" class="services-image">
+        </div>
+      </div>
+
+ <!-- Service 2: Agentic AI -->
+ <div class="services-item" onclick="toggleContent(1)">
+  <span class="services-name">Agentic AI: Adaptive, Autonomous, Actionable</span>
+  <span class="toggle-icon">+</span>
+</div>
+<div class="services-content" id="content-1">
+  <div class="services-details">
+    <p class="services-details-description">
+      Agentic AI goes beyond traditional automation—it analyzes, plans, and makes decisions in real time to achieve goals with minimal human input. From workflow automation to intelligent decision-making, our development team builds custom agentic AI solutions tailored to your business needs, ensuring smarter, more efficient operations.
+    </p>
+  </div>
+  <div class="services-image-container">
+    <img src="robot.png" alt="Robotics and Smart Devices Image" class="services-image">
+  </div>
+</div>
+      <!-- Service 3: Predictive Analytics and Forecasting -->
+      <div class="services-item" onclick="toggleContent(2)">
+        <span class="services-name">Predictive Analytics and Forecasting</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="services-content" id="content-2">
+        <div class="services-details">
+          <p class="services-details-description">
+            Harness the power of AI to predict trends, optimize operations, and stay ahead of the competition. From demand forecasting to customer behavior analysis, our solutions provide actionable insights that enable smarter, data-driven decisions.
+          </p>
+        </div>
+        <div class="services-image-container">
+          <img src="code.png" alt="Predictive Analytics Image" class="services-image">
+        </div>
+      </div>
+
+      <!-- Service 4: AI-Powered Automation -->
+      <div class="services-item" onclick="toggleContent(3)">
+        <span class="services-name">AI-Powered Automation</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="services-content" id="content-3">
+        <div class="services-details">
+          <p class="services-details-description">
+            Streamline processes and enhance productivity with AI-driven automation. From intelligent workflows to smart devices, our solutions save time and resources while maintaining precision and efficiency.
+          </p>
+        </div>
+        <div class="services-image-container">
+          <img src="guidance.png" alt="AI-Powered Automation Image" class="services-image">
+        </div>
+      </div>
+
+
+      <!-- Service 5: Storz.ai Integration -->
+      <div class="services-item" onclick="toggleContent(4)">
+        <span class="services-name">Software as a Service</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="services-content" id="content-4">
+        <div class="services-details">
+          <h3 class="services-details-title">Storz Assistant for Retail</h3>
+          <p class="services-details-description">
+            Storz is an AI-powered platform designed to enhance in-store customer experiences by offering personalized shopping assistance. With features like intelligent recommendations, cross-selling, and detailed analytics, Storz.ai empowers retailers to boost sales, improve engagement, and reduce operational costs.
+          </p>
+          <button onclick="window.open('https://www.storz.ai', '_blank')" 
+            style="background-color: #0000ff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 1rem; margin-top: 10px;">
+            Learn More
+          </button>
+        </div>
+        <div class="services-image-container">
+          <img src="storz.png" alt="Storz.ai Integration Image" class="services-image">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Us Section -->
+<div id="contact-us" class="contact-section fade-in">
+  <div class="contact-section" style="display: flex; justify-content: space-between;">
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="from_name" class="contact-input" placeholder="Your Name" required>
+      <input type="email" name="from_email" class="contact-input" placeholder="Your Email" required>
+      <textarea name="message" class="contact-input" placeholder="Your Inquiry" rows="5" required></textarea>
+      <button type="submit" class="contact-button">Get in Touch</button>
+    </form>
+    <div class="contact-info">
+      <h2 class="contact-title">Contact <span style="color: var(--primary-color);">Us</span></h2>
+      <p class="contact-description">
+        It is very important for us to keep in touch with you, so we are always ready to answer any question that interests you. Shoot!
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <hr class="footer-line">
+  <p class="footer-text">© 2025 Unpuzzlers Corp </p>
+</footer>
+<!-- EmailJS Library -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Your main JavaScript file -->
+<script src="main.js"></script>
+</body>
+</html>

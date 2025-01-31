@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Intro</title>
+  <link rel="stylesheet" href="animation.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animation Container -->
+  <div class="animation-container" id="animationContainer">
+    <div class="letter-container">
+      <div id="letter" class="letter">Eat</div>
+      <img id="smallLogo" class="small-logo" src="small_logo.png" alt="Small Logo">
+    </div>
+  </div>
+
+  <!-- Main Content Placeholder -->
+  <div id="mainContent" class="hidden"></div>
+
+  <!-- Animation Script -->
+  <script src="script.js"></script>
+
+  <!-- Dynamic Page Loading Script -->
+  <script>
+    const targetPage = 'index.html'; // Replace with the page you want to load
+    const animationDuration = 13000; // Duration of the animation in ms
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const animationContainer = document.getElementById('animationContainer');
+      const mainContent = document.getElementById('mainContent');
+
+      setTimeout(() => {
+        // Remove the animation and load the target page
+        animationContainer.classList.add('hidden');
+        fetch(targetPage)
+          .then(response => response.text())
+          .then(html => {
+            mainContent.innerHTML = html;
+            mainContent.classList.remove('hidden');
+          })
+          .catch(err => console.error('Error loading page:', err));
+      }, animationDuration);
+    });
+  </script>
+</body>
+</html>
