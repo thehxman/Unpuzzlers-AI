@@ -4,8 +4,8 @@
     const heroDescription = document.getElementById('hero-description');
     const textData = [
       {
-        title: "AI made simple",
-        description: "We simplify AI’s complexities, providing clear, actionable strategies that empower your leadership and teams to make confident decisions. From understanding what AI can do for you to knowing how to implement it effectively, we’ll illuminate the path forward.",
+        title: "AI is reshaping industries",
+        description: "AI is moving fast—faster than most companies can keep up with. Industries are being disrupted overnight, and those who understand its possibilities are the ones leading the change. We help you navigate this transformation, ensuring AI works for you, not against you.",
       },
       {
         title: "The Right Solution, Every Time.",
